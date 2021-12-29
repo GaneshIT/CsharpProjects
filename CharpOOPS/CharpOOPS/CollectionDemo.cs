@@ -11,6 +11,7 @@ namespace CharpOOPS
         public int id { get; set; }
         public string name { get; set; }
         public int salary { get; set; }
+        public string dept { get; set; }
 
         public person(int id, string name, int salary)
         {

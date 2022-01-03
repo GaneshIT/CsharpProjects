@@ -11,7 +11,7 @@ namespace CharpOOPS
     {
         static void Main(string[] args)
         {
-            
+
             Eligible();
         }
 

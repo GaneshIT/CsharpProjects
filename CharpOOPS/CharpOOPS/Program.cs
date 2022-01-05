@@ -11,8 +11,20 @@ namespace CharpOOPS
     {
         static void Main(string[] args)
         {
+            //AddressDetails addressDetails = new AddressDetails();
+            //addressDetails.City = "Blr";
+            //addressDetails.HouseNo = 11;
+            //addressDetails.StreetName = "North";
+            //SerializationDemo.XMLSerialize(addressDetails);
+            //SerializationDemo.XMLDeSerialize(@"C:\Test\XmlData.xml");
+            //SerializationDemo.Serialize();
+            //SerializationDemo.DeSeriazlize();
+            // Eligible();
+            //ReflectionDemo.ExecuteRelection();
 
-            Eligible();
+            ParallelProgrammingDemo.ExecuteParallelDemo();
+            Console.ReadKey();
+
         }
 
         public static void Eligible()

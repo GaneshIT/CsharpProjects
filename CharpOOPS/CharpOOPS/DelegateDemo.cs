@@ -34,25 +34,28 @@ namespace CharpOOPS
             }
         }
     }
-    class DBManager
+
+   class DBManager
     {
+        public delegate void EnumConnectionsCallback(DBConnection connection);
+
         static DBConnection[] activeConnections;
         public void AddConnections()
         {
             activeConnections = new DBConnection[5];
             for (int i = 0; i < 5; i++)
             {
-                activeConnections[i] =
+                //DBConnection obj = new DBConnection("DBConnection " + (i + 1));
+                activeConnections[i] = 
   new DBConnection("DBConnection " + (i + 1));
             }
         }
-        public delegate void EnumConnectionsCallback(DBConnection connection);
         public static void EnumConnections(EnumConnectionsCallback callback)
         {
             foreach (DBConnection connection in activeConnections)
             {
-                callback(connection);
-            }
+                callback(connection);//function call
+            }           
         }
     }
     class Delegate1App
@@ -62,14 +65,15 @@ namespace CharpOOPS
             Console.WriteLine("Callback method called for "
                               + connection.name);
         }
-        public static void Main()
-        {
-            DBManager dbMgr = new DBManager();
-            dbMgr.AddConnections();
-            DBManager.EnumConnectionsCallback myCallback =
-            new DBManager.EnumConnectionsCallback(ActiveConnectionsCallback);           
-            DBManager.EnumConnections(myCallback);
-        }
+        //public static void Main()
+        //{
+        //    DBManager dbMgr = new DBManager();
+        //    dbMgr.AddConnections();
+        //    //creating delegate obj and passing method reference to it
+        //    DBManager.EnumConnectionsCallback myCallback =
+        //    new DBManager.EnumConnectionsCallback(ActiveConnectionsCallback);           
+        //    DBManager.EnumConnections(myCallback);
+        //}
     }
 
 

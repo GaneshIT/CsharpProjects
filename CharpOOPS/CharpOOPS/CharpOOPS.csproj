@@ -45,8 +45,12 @@
   <ItemGroup>
     <Compile Include="ClassDemo.cs" />
     <Compile Include="CollectionsDemo.cs" />
+    <Compile Include="DelegateDemo.cs" />
+    <Compile Include="ParallelProgrammingDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectionDemo.cs" />
+    <Compile Include="SerializationDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
